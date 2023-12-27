@@ -1,6 +1,6 @@
-import { Component,Input } from '@angular/core';
-import { Animal } from '../shared/model/animal';
+import { Component, Input } from '@angular/core';
 import { AnimalSpecies } from '../shared/model/animal-species';
+import { Animal } from '../shared/model/animal';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,10 +12,11 @@ import { CommonModule } from '@angular/common';
 })
 export class AnimalSummaryComponent {
 
-  animalsMap: Map<AnimalSpecies,number> =new Map<AnimalSpecies,number>();
+  animalsMap=new Map<AnimalSpecies,number>()
 
-  @Input() set animals(animalList : Animal[]) {
-    for(let animal of animalList){
+  @Input()
+  set animalArray(animalArray:Animal[]){
+    for(let animal of animalArray){
       let species = animal.species
       if (this.animalsMap.has(species)) {
         const currentValue = this.animalsMap.get(species)!;

@@ -5,8 +5,8 @@ import { HeaderComponent } from "./header/header.component";
 import { AnimalComponent } from "./animal/animal.component";
 import { Dog } from './shared/model/dog';
 import { Cat } from './shared/model/cat';
-import { AnimalSummaryComponent } from "./animal-summary/animal-summary.component";
 import { Animal } from './shared/model/animal';
+import { AnimalSummaryComponent } from "./animal-summary/animal-summary.component";
 
 
 @Component({
@@ -19,5 +19,6 @@ import { Animal } from './shared/model/animal';
 export class AppComponent {
     myDog = new Dog("Muki");
     myCat = new Cat("Shaul");
-    animals:Animal[]=[this.myCat,this.myDog]
+    myCat2 = new Cat("Mitsi");
+    animals:Animal[]=[this.myCat,this.myDog,this.myCat2]
 }

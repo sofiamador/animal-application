@@ -1,6 +1,6 @@
 export enum AnimalSpecies {
-    Dog ="Dog",
-    Cat = "Cat",
-    Others = "Others"
+    Dog="Dog" ,
+    Cat= "Cat",
+    Others="Other"
   }
  
